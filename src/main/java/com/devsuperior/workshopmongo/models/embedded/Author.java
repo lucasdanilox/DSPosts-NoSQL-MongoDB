@@ -16,7 +16,7 @@ public class Author {
     }
 
     public Author(User entity) {
-        id = entity.getName();
+        id = entity.getId();
         name = entity.getName();
     }
 
