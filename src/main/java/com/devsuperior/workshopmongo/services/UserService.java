@@ -25,8 +25,7 @@ public class UserService {
     }
 
     public UserDTO findById(String id) {
-        Optional<User> result = repository.findById(id);
-        User entity = result.orElseThrow(() -> new ResourceNotFoundException("Objeto não encontrado"));
+        User entity = getEntityById(id);
         return new UserDTO(entity);
     }
 
